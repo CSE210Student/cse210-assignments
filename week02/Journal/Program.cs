@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.IO;
 
 class Program
 {
@@ -23,6 +25,25 @@ class Program
         if (choice == 1)
         {
             theJournal.AddEntry(anEntry);
+        }
+
+        else if (choice == 2)
+        {
+            theJournal.DisplayAll();
+        }
+
+        else if (choice == 3)
+        {
+            Console.Write("What is the file name? ");
+            string file = Console.ReadLine();
+            theJournal.LoadFile(file);
+        }
+
+        else if (choice == 4)
+        {
+            Console.Write("What is the file name? ");
+            string file = Console.ReadLine();
+            theJournal.SaveToFile(file);
         }
     }
 }

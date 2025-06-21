@@ -11,15 +11,15 @@ public class Journal
 
     public void DisplayAll()
     {
-
+        foreach (Entry entry in _entries)
+        {
+            entry.Display();
+        }
     }
 
-    public void SaveToFile(string File)
+    public void SaveToFile(string file)
     {
-        Console.Write("What is the file name? ");
-        string _fileName = Console.ReadLine();
-
-        using (StreamWriter outputFile = new StreamWriter(_fileName))
+        using (StreamWriter outputFile = new StreamWriter(file))
         {
             foreach(Entry e in _entries)
             {
@@ -30,8 +30,6 @@ public class Journal
 
     public void LoadFile(string file)
     {
-        Console.Write("What is the file name? ");
-        string _fileName = Console.ReadLine();
-        string[] lines = System.IO.File.ReadAllLines(_fileName);
+        string[] lines = System.IO.File.ReadAllLines(file);
     }
 }
