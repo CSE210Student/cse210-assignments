@@ -5,6 +5,12 @@ using System.IO;
 using System.Xml.Serialization;
 
 //https://stackoverflow.com/questions/1753508/how-could-i-get-a-random-string-from-a-list-and-assign-it-to-a-variable
+//https://www.reddit.com/r/learnprogramming/comments/9wqfwf/c_console_color_change_of_single_word/
+
+//EXCEED REQUIREMENTS AND SHOW CREATIVITY
+//In addition to the required information that is saved in the file,
+//I added a question to ask the users mood and save that as well.
+//It lists 4 moods, and colors each mood when it prints them as an option.
 
 class Program
 {
@@ -13,7 +19,7 @@ class Program
         int choice = 10;
         Journal theJournal = new Journal();
         Entry anEntry = new Entry();
-        
+
         while (choice != 5)
         {
             Console.WriteLine("Welcome to the Journal Program");

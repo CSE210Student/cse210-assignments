@@ -7,8 +7,22 @@ public class Journal
 
     public void AddEntry(Entry newEntry)
     {
-        PromptGenerator prompts = new PromptGenerator();
         Entry anEntry = new Entry();
+        
+        Console.WriteLine("What is your current mood?");
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("Angry");
+        Console.ForegroundColor = ConsoleColor.Blue;
+        Console.WriteLine("Sad");
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("Happy");
+        Console.ForegroundColor = ConsoleColor.Gray;
+        Console.WriteLine("Neutral");
+        Console.ForegroundColor = ConsoleColor.White;
+        Console.Write(">");
+        anEntry._mood = Console.ReadLine();
+
+        PromptGenerator prompts = new PromptGenerator();
         anEntry._promptText = prompts.GetRandomPrompt();
         Console.WriteLine($"Prompt: {anEntry._promptText}");
 
@@ -37,7 +51,7 @@ public class Journal
         {
             foreach (Entry e in _entries)
             {
-                outputFile.WriteLine($"{e._date}-{e._promptText}-{e._entryText}");
+                outputFile.WriteLine($"{e._date}-{e._promptText}-{e._mood}-{e._entryText}");
             }
         }
     }
@@ -56,7 +70,9 @@ public class Journal
             anEntry._date = date;
             string prompt = parts[1];
             anEntry._promptText = prompt;
-            string entryText = parts[2];
+            string mood = parts[2];
+            anEntry._mood = mood;
+            string entryText = parts[3];
             anEntry._entryText = entryText;
 
             _entries.Add(anEntry);
