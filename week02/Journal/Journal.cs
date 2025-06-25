@@ -8,7 +8,7 @@ public class Journal
     public void AddEntry(Entry newEntry)
     {
         Entry anEntry = new Entry();
-        
+
         Console.WriteLine("What is your current mood?");
         Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine("Angry");
