@@ -19,10 +19,15 @@ class Program
             Console.WriteLine("Press ENTER to continue or type 'quit' to exit the program.");
             userChoice = Console.ReadLine();
 
+            Random randomGenerator = new Random();
+            int numberToHide = randomGenerator.Next(1, 4);
+
+            s.HideRandomWords(numberToHide);
+
             if (s.IsCompletelyHidden() == true)
-            {
-                userChoice = "quit";
-            }
+                {
+                    userChoice = "quit";
+                }
 
         } while (userChoice != "quit");
 

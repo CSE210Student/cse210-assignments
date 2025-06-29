@@ -2,10 +2,16 @@ public class Word
 {
     private string _text;
     private bool _isHidden;
+    private Word word;
 
     public Word(string text)
     {
         _text = text;
+    }
+
+    public Word(Word word)
+    {
+        this.word = word;
     }
 
     public void Hide()
@@ -32,6 +38,15 @@ public class Word
 
     public string GetDisplayText()
     {
-        return "";
+        string _hidden = _text;
+;
+        if (_isHidden == true)
+        {
+            _hidden = new string('_', _text.Length);
+
+            return _hidden;
+        }
+        
+        return _hidden;
     }
 }
