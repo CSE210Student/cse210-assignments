@@ -1,3 +1,5 @@
+using System.Globalization;
+
 public class Scripture
 {
     private Reference _reference;
@@ -18,9 +20,18 @@ public class Scripture
     public void HideRandomWords(int numberToHide)
     {
         Random randomGenerator = new Random();
-        int _hideAmount = randomGenerator.Next(1, 4);
+        // int _hideAmount = randomGenerator.Next(1, 4);
 
-        
+        for (int _hideAmount = randomGenerator.Next(1, 4); _hideAmount > 0; _hideAmount--)
+        {
+            //word to hide index
+            int _wordToHide = randomGenerator.Next(0, _words.Count());
+
+            if (_words[_wordToHide].IsHidden() == false)
+            {
+                _words[_wordToHide].Hide();
+            }
+        }
     }
 
     public string GetDisplayText()
@@ -30,6 +41,6 @@ public class Scripture
 
     public bool IsCompletelyHidden()
     {
-        return true;
+        return false;
     }
 }
