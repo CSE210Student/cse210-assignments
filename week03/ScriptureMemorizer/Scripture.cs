@@ -25,15 +25,15 @@ public class Scripture
         {
             int index = randomGenerator.Next(0, _words.Count);
             Word word = new Word(_words[index]);
-            
-            if (_words[index].IsHidden() == false)
-            {
-                _words[index].Hide();
-            }
-            else
-            {
-                _numberToHide += 1;
-            }
+                
+                if (_words[index].IsHidden() == false)
+                {
+                    _words[index].Hide();
+                }
+                else
+                {
+                    _numberToHide += 1;
+                }
         }
     }
 

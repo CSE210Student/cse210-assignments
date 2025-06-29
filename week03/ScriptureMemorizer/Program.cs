@@ -1,6 +1,9 @@
 using System;
 using System.Diagnostics;
 
+//My extra thing I added was a journaling prompt after the do-while loop ends. 
+//The prompt asks the user if they would like to journal. If YES, the program launches notepad.exe
+
 class Program
 {
     static void Main(string[] args)
@@ -25,11 +28,28 @@ class Program
             s.HideRandomWords(numberToHide);
 
             if (s.IsCompletelyHidden() == true)
-                {
-                    userChoice = "quit";
-                }
+            {
+                Console.Clear();
+
+                Console.WriteLine(s.GetDisplayText());
+                Console.WriteLine("");
+                Console.WriteLine("Press ENTER to continue or type 'quit' to exit the program.");
+                userChoice = Console.ReadLine();
+
+                userChoice = "quit";
+            }
 
         } while (userChoice != "quit");
 
+        Console.Clear();
+        Console.WriteLine("Would you like to do some journaling about your thoughts and insights on this scripture?");
+        Console.WriteLine("yes     no");
+        Console.Write(">");
+        string journalChoice = Console.ReadLine();
+
+        if (journalChoice == "yes")
+        {
+            Process.Start("notepad.exe");
+        }
     }
 }
