@@ -21,20 +21,21 @@ public class Activity
 
     public void ShowSpinner(int seconds)
     {
-        List<string> spinnerStrings = new List<string>();
-
-        spinnerStrings.Add("|");
-        spinnerStrings.Add("/");
-        spinnerStrings.Add("-");
-        spinnerStrings.Add("\\");
-        spinnerStrings.Add("|");
-        spinnerStrings.Add("/");
-        spinnerStrings.Add("-");
-        spinnerStrings.Add("\\");
+        List<string> spinnerStrings =
+        [
+            "|",
+            "/",
+            "-",
+            "\\",
+            "|",
+            "/",
+            "-",
+            "\\",
+        ];
 
 
         DateTime startTime = DateTime.Now;
-        DateTime endTime = startTime.AddSeconds(10);
+        DateTime endTime = startTime.AddSeconds(seconds);
 
         int i = 0;
 
@@ -42,7 +43,7 @@ public class Activity
         {
             string spin = spinnerStrings[i];
             Console.Write(spin);
-            Thread.Sleep(1000);
+            Thread.Sleep(250);
             Console.Write("\b \b");
 
             i++;
