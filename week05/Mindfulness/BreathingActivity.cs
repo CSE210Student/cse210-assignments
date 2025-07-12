@@ -9,11 +9,8 @@ public class BreathingActivity : Activity
     public void Run()
     {
         Console.Clear();
-        Console.WriteLine($"Welcome to the {_name}.");
-        Console.WriteLine("");
-        Console.WriteLine(_description);
-        Console.WriteLine("");
-        Console.Write("How long, in seconds, would you like the activity to last? > ");
+        DisplayStartingMessage();
+        Console.Write("\n\nHow long, in seconds, would you like the activity to last? > ");
         _duration = int.Parse(Console.ReadLine());
 
         Console.Clear();
@@ -34,6 +31,8 @@ public class BreathingActivity : Activity
             Console.Write("\n\nBreathe out...");
             ShowCountDown(exhale);
         }
+
+        DisplayEndingMessage();
 
     }
 }

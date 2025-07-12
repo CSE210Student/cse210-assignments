@@ -17,7 +17,7 @@ class Program
             Console.WriteLine("2. Start REFLECTING activity");
             Console.WriteLine("3. Start LISTING activity");
             Console.WriteLine("4. Quit");
-            Console.Write("Select a choice fomr the menu: > ");
+            Console.Write("Select a choice fomr the menu: ");
             string userChoice = Console.ReadLine();
             choice = int.Parse(userChoice);
 

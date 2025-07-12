@@ -11,12 +11,16 @@ public class Activity
 
     public void DisplayStartingMessage()
     {
-
+        Console.WriteLine($"Welcome to {_name}.");
+        Console.Write($"\n{_description}");
     }
 
     public void DisplayEndingMessage()
     {
-
+        Console.WriteLine("\n\nWay to go superstar!");
+        Console.WriteLine($"You have completed another {_duration} seconds of {_name}.");
+        ShowSpinner(3);
+        Console.Clear();
     }
 
     public void ShowSpinner(int seconds)
