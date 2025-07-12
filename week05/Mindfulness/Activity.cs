@@ -6,7 +6,7 @@ public class Activity
 
     public Activity()
     {
-
+        
     }
 
     public void DisplayStartingMessage()
@@ -43,7 +43,7 @@ public class Activity
         {
             string spin = spinnerStrings[i];
             Console.Write(spin);
-            Thread.Sleep(250);
+            Thread.Sleep(500);
             Console.Write("\b \b");
 
             i++;
@@ -57,6 +57,11 @@ public class Activity
 
     public void ShowCountDown(int seconds)
     {
-        
+        for (int i = seconds; i > 0; i--)
+        {
+            Console.Write(i);
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
+        }
     }
 }
