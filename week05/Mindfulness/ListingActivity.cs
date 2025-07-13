@@ -16,19 +16,13 @@ public class ListingActivity : Activity
     public ListingActivity()
     {
         _name = "Listing Activity";
-        _description = "This activity is designed to help you reflect on good things in your life by having you list as many of them as you can regarding a specific area.";
+        _description = "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.";
     }
 
     public void Run()
     {
         Console.Clear();
         DisplayStartingMessage();
-        Console.Write("\n\nHow long, in seconds, would you like the activity to last? > ");
-        _duration = int.Parse(Console.ReadLine());
-
-        Console.Clear();
-        Console.WriteLine("Get ready...");
-        ShowSpinner(5);
 
         Console.WriteLine("\nList as many responses as you can to the following prompt:");
         GetRandomPrompt();

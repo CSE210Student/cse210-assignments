@@ -13,11 +13,17 @@ public class Activity
     {
         Console.WriteLine($"Welcome to {_name}.");
         Console.Write($"\n{_description}");
+        Console.Write("\n\nHow long, in seconds, would you like the activity to last? ");
+        _duration = int.Parse(Console.ReadLine());
+        Console.Clear();
+        Console.WriteLine("Get ready...");
+        ShowSpinner(5);
     }
 
     public void DisplayEndingMessage()
     {
         Console.WriteLine("\n\nWay to go superstar!");
+        Thread.Sleep(1500);
         Console.WriteLine($"You have completed another {_duration} seconds of {_name}.");
         ShowSpinner(3);
         Console.Clear();
