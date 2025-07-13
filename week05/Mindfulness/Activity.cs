@@ -11,6 +11,7 @@ public class Activity
 
     public void DisplayStartingMessage()
     {
+        Console.Clear();
         Console.WriteLine($"Welcome to {_name}.");
         Console.Write($"\n{_description}");
         Console.Write("\n\nHow long, in seconds, would you like the activity to last? ");

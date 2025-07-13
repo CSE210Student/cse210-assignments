@@ -48,7 +48,7 @@ public class ReflectingActivity : Activity
         while (DateTime.Now < endTime)
         {
             DisplayQuestion();
-            ShowSpinner(10);
+            ShowSpinner(5);
         }
 
         DisplayEndingMessage();

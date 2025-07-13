@@ -21,7 +21,6 @@ public class ListingActivity : Activity
 
     public void Run()
     {
-        Console.Clear();
         DisplayStartingMessage();
 
         Console.WriteLine("\nList as many responses as you can to the following prompt:");

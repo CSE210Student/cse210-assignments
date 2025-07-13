@@ -8,7 +8,6 @@ public class BreathingActivity : Activity
 
     public void Run()
     {
-        Console.Clear();
         DisplayStartingMessage();
 
         int inhale = 4;

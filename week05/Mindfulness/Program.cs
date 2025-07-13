@@ -3,6 +3,11 @@ using System.Xml.Serialization;
 
 //https://www.w3schools.com/cs/cs_switch.php#:~:text=C%23%20Switch%20Statements,code%20blocks%20to%20be%20executed.
 
+//For exceeding requirements and dhowing creativty:
+//I decided to add a word association acitivty. The user is given a random word
+//and then gives the first word that it makes them think of.
+//This continues untill the duration given by the user is done.
+
 class Program
 {
     static void Main(string[] args)
@@ -16,7 +21,8 @@ class Program
             Console.WriteLine("1. Start BREATHING activity");
             Console.WriteLine("2. Start REFLECTING activity");
             Console.WriteLine("3. Start LISTING activity");
-            Console.WriteLine("4. Quit");
+            Console.WriteLine("4. Start WORD ASSOCIATION activity");
+            Console.WriteLine("5. Quit");
             Console.Write("Select a choice fomr the menu: ");
             string userChoice = Console.ReadLine();
             choice = int.Parse(userChoice);
@@ -36,6 +42,10 @@ class Program
                     listing.Run();
                     break;
                 case 4:
+                    WordAssociationActivity wordAssociation = new WordAssociationActivity();
+                    wordAssociation.Run();
+                    break;
+                case 5:
                     break;
                 default:
                     Console.WriteLine("Please enter a valid menu option.");
