@@ -12,11 +12,11 @@ public class EternalGoal : Goal
 
     public override bool IsComplete()
     {
-        return true;
+        return false;
     }
 
     public override string GetStringRepresentation()
     {
-        return "";
+        return $"EternalGoal | {GetName()} | {GetDescription} | {GetPoints}";
     }
 }
