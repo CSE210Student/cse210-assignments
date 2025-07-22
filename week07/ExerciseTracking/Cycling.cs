@@ -1,8 +1,8 @@
 using System.Diagnostics;
 
-public class Running : Activity
+public class Cycling : Activity
 {
-    public Running(int activityLength, double distance) : base(activityLength)
+    public Cycling(int activityLength, double distance) : base(activityLength)
     {
         _distance = distance;
         _activityLength = activityLength;
